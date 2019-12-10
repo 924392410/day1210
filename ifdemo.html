@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 引入vue的核心外部文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="radio" value="BatMan"  name="star" v-model="name"/>BatMan
+        <input type="radio" value="Penguin" name="star" v-model="name"/>Penguin
+        <input type="radio" value="Joker" name="star" v-model="name"/>Joker
+        <img v-if="name=='BatMan'" style="width:300px;height: 350px; " src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575976811449&di=70529e5db27739be3292129441c1b337&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F0f50676d80ed8aa0c12a642c99e243e24a7e2e5f193fa-AzW5v9_fw236">
+        <img v-else-if="name=='Penguin'" style="width:300px;height: 350px; "  src="https://gss2.bdstatic.com/-fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=4d5010c3af1ea8d39e2f7c56f6635b2b/267f9e2f07082838619a7b6cb199a9014c08f137.jpg" />
+        <img v-else-if="name=='Joker'" style="width:300px;height: 350px; "  src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575977781489&di=f9ebdef4c21e4f33c7492e9a59d3c598&imgtype=0&src=http%3A%2F%2Fimg1.ali213.net%2Fglpic%2F2019%2F11%2F11%2F584_20191111111204432.jpg" />
+        <img v-else style="width:300px;height: 350px; "  src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575978032036&di=14a507c978f27f5d02bbd7caa631175c&imgtype=jpg&src=http%3A%2F%2Fimg3.imgtn.bdimg.com%2Fit%2Fu%3D4170194638%2C465318776%26fm%3D214%26gp%3D0.jpg">
+    </div>
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                show:'false',
+                name:""
+            }
+        });
+    </script>
+</body>
+</html>
